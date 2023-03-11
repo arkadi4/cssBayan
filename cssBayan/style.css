@@ -47,6 +47,7 @@ h1 {
   width: 100%; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 30px 0;
   font-size: 3rem;
 }
@@ -57,28 +58,73 @@ h1 {
   /* visibility: hidden; */
   width: 25vw;
   margin: 0 auto;
-  transition: 0.5s;
+  transition: all 1.5s;
 }
 
 
 
 .memBlock input:checked ~ .memBlock__imageContainer {
   max-height: 100vh;
+  transition: all 1s;
   /* visibility: visible; */
 }
 
-.memBlock label::after {
+.divForLabelAndIcon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labelExpandIcon {
+  background: url(./assets/expand.svg);
+  max-width: 20px;
+  max-height: 20px;
+  /* opacity: 1; */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.labelCollapseIcon {
+  background: url(./assets/collapse.svg);
+  max-width: 20px;
+  max-height: 0;
+  /* opacity: 1; */
+}
+
+.memBlock input:checked + label>.labelCollapseIcon {
+  /* opacity: 1; */
+  transition: all 1s;
+  /* transform: rotate(45deg); */
+  max-height: 20px;
+}
+.memBlock input:checked + label>.labelExpandIcon {
+  /* opacity: 1; */
+  max-height: 0;
+  transition: all 1s;
+  /* transform: rotate(45deg); */
+}
+.memBlock input:not(:checked) + label>.labelCollapseIcon {
+  transition: all 1s;
+  max-height: 20px;
+  /* transform: rotate(-45deg); */
+}
+.memBlock input:not(:checked) + label>.labelExpandIcon {
+  transition: all 1s;
+  /* transform: rotate(-45deg); */
+  max-height: 20px;
+}
+
+/* .memBlock label::after {
   display: block;
-  content: "\25b6";
-  /* content: url(./assets/collapse.svg); */
+  content: "\2b";
+  content: url(./assets/collapse.svg);
   width: 1vw;
-  transition: all 0.5s;
-}
+  transition: all 1s;
+} */
 
-.memBlock input:checked ~ .memBlock label::after {
+/* .memBlock input:checked ~ .memBlock label::after {
 
-  transform: rotate(90deg);
-}
+  transform: rotate(45deg);
+} */
 
 
 /* nnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
