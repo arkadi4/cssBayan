@@ -1,0 +1,288 @@
+html {
+  font-size: 10px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 50vw;
+}
+@media (max-width:1920px) and (max-height:1080px) {
+  .wrapper {
+    width:70vw;
+  }
+}
+@media (max-width:820px) and (max-height:1180px) {
+  .wrapper {
+    width:90vw;
+  }
+}
+
+h1 {
+  font-size: 10rem;
+  text-align: center;
+}
+@media (max-width:1920px) and (max-height:1080px) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+@media (max-width:820px) and (max-height:1180px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+.memBlock__text {
+  font-size: 2rem;
+  margin: 30px 0;
+}
+@media (max-width:1920px) and (max-height:1080px) {
+  .memBlock__text {
+    font-size: 3rem;
+  }
+}
+@media (max-width:820px) and (max-height:1180px) {
+  .memBlock__text {
+    font-size: 2.5rem;
+  }
+}
+
+.memBlock input {
+  display: none;
+}
+.memBlock input:checked ~ .memBlock__imageContainer {
+  max-height: 100vh;
+  transition: all 0.5s;
+}
+.memBlock input:checked ~ label>span {
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+/* .memBlock input:checked + label:hover + label>span {
+  transform: rotate(45deg);
+  transition: all 1s;
+} */
+
+
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  font-size: 3rem;
+}
+label:hover {
+  cursor: pointer;
+}
+label:hover + .memBlock__imageContainer {
+  max-height: 1000vh;
+  cursor: pointer;
+
+}
+label:hover ~ span {
+  transform: rotate(45deg);
+  
+}
+
+.memBlock__imageContainer {
+  overflow: hidden;
+  max-height: 0;
+  width: 25vw;
+  margin: 0 auto;
+  transition: all 0.5s;
+  /* background: url(./assets/1.jpg); */
+}
+@media (max-width:1920px) and (max-height:1080px) {
+  .memBlock__imageContainer {
+    width:40vw;
+  }
+}
+@media (max-width:820px) and (max-height:1180px) {
+  .memBlock__imageContainer {
+    width:50vw;
+  }
+}
+/* .memBlock__imageContainer:hover {
+  cursor: pointer;
+  max-height: 100vh;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .memBlock__imageContainer:hover + .memBlock>label>span {
+  transform: rotate(45deg);
+  transition: all 1s;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .divForLabelAndIcon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+
+/* 
+.labelExpandIcon {
+  background: url(./assets/expand.svg);
+  max-width: 20px;
+  max-height: 20px;
+  opacity: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.labelCollapseIcon {
+  background: url(./assets/collapse.svg);
+  max-width: 20px;
+  max-height: 0;
+  opacity: 1;
+}
+
+.memBlock input:checked + label>.labelCollapseIcon {
+  opacity: 1;
+  transition: all 1s;
+  transform: rotate(45deg);
+  max-height: 20px;
+}
+.memBlock input:checked + label>.labelExpandIcon {
+  opacity: 1;
+  max-height: 0;
+  transition: all 1s;
+  transform: rotate(45deg);
+}
+.memBlock input:not(:checked) + label>.labelCollapseIcon {
+  transition: all 1s;
+  max-height: 20px;
+  transform: rotate(-45deg);
+}
+.memBlock input:not(:checked) + label>.labelExpandIcon {
+  transition: all 1s;
+  transform: rotate(-45deg);
+  max-height: 20px;
+} */
+
+/* .memBlock label::after {
+  display: block;
+  content: "\2b";
+  content: url(./assets/collapse.svg);
+  width: 1vw;
+  transition: all 1s;
+} */
+
+/* .memBlock input:checked ~ .memBlock label::after {
+
+  transform: rotate(45deg);
+} */
+
+
+/* nnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #idForVisibility:not(:target) {
+  visibility: hidden;
+}
+
+#idForVisibility:target {
+  visibility: visible;
+} */
